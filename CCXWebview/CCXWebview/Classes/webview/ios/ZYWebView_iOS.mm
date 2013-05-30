@@ -17,6 +17,7 @@
     if (!m_webview)
     {
         m_webview = [[UIWebView alloc] initWithFrame:CGRectMake(x, y, widht , height)];
+        m_webview.scalesPageToFit = YES;
         [m_webview setDelegate:self];
 
         [[EAGLView sharedEGLView] addSubview:m_webview];

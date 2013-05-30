@@ -1,3 +1,6 @@
+.DS_Store
+*.swp
+
 
 CCXWebview/CCXWebview/proj.android/assets/
 CCXWebview/CCXWebview/proj.android/obj/
