@@ -65,6 +65,13 @@
 #pragma mark - WebView
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    NSString *absolutString = [[request URL] absoluteString];
+    if ([absolutString isEqualToString:@"ssjjsy://recharge"])
+    {
+        // do something
+        // recharge here
+        return false;
+    }
     return true;
 }
 
