@@ -22,6 +22,8 @@ public:
     CREATE_FUNC(ZYWebView);
 	bool init();
     
+    static cocos2d::CCSize getUISize();
+    
     /**
      *	@brief	显示WebView
      *

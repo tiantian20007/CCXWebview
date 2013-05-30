@@ -27,6 +27,12 @@ bool ZYWebView::init()
 	return true;
 }
 
+cocos2d::CCSize ZYWebView::getUISize()
+{
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    return cocos2d::CCSize(rect.size.width, rect.size.height);
+}
+
 void ZYWebView::showWebView(const char* url, float x, float y, float width, float height)
 {
     m_webViewiOS = [[ZYWebView_iOS alloc] init];
