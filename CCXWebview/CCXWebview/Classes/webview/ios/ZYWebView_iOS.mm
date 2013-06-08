@@ -9,6 +9,8 @@
 #import "ZYWebView_iOS.h"
 #import "EAGLView.h"
 
+//#include "JinSDK4399.h"
+
 @implementation ZYWebView_iOS
 
 
@@ -52,7 +54,7 @@
 {
     NSString *request = [NSString stringWithUTF8String:url];
     [m_webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:request] 
-                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData 
+                                            cachePolicy:NSURLRequestReloadRevalidatingCacheData 
                                         timeoutInterval:60]];
 }
 
@@ -70,6 +72,7 @@
     {
         // do something
         // recharge here
+        //OpenVipLayer();
         return false;
     }
     return true;
